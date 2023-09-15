@@ -457,14 +457,59 @@ elif conta_universitaria:
         else:
                 print("Saldo insuficiente!")
 ```
+
 #### *If ternário*
 O if ternário permite escrever uma condição em uma única linha. Ele é composto por três partes, a primeira parte é o retorno caso a expressão retorne verdadeiro, a segunda parte é a expressão lógica e a terceira parte é o retorno caso a expressão não seja atendida.
+
 ```python
 Ex.:
 status = "Sucesso" 
 
 if saldo >= saque else "Falha"
 print(f"{status} ao realizar o saque!")
+```
 
+### Estruturas de Repetição
+São for e while
+São estruturas utilizadas para repetir um trecho de código um determinado número de vezes. Esse número pode ser conhecido previamente ou determinado através de uma expressão lógica.
+
+Ex.: Sem repetição
+```python
+# Receba um número do teclado e exiba os 2 números seguintes
+
+a = int(input("Informe um número inteiro: "))
+print(a)
+
+a += 1
+print(a)
+
+a += 1
+print(a)
+```
+
+Ex.: com repetição
+```python 
+# Receba um número do teclado e exiba os 2 números seguintes
+
+a = int(input("Informe um número inteiro: "))
+print(a)
+
+repita 2 vezes:
+    a += 1
+    print(a)
+```
+
+#### Comando for
+O comando for é usado para percorrer um objeto iterável. Faz sentido usar for quando sabemos o número exato de vezes que nosso bloco de código deve ser executado, ou quando queremos percorrer um objeto iterável.
+
+```python
+texto = input("Informe um texto: ")
+VOGAIS = "AEIOU"
+
+for letra in texto:
+        if letra.upper() in VOGAIS:
+		        print(letra, end="")
+print() # adiciona uma quebra de linha
+```
 
 
