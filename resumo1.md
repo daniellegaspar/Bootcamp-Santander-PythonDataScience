@@ -499,9 +499,9 @@ repita 2 vezes:
     print(a)
 ```
 
-#### Comando for
+*Comando for*
 O comando for é usado para percorrer um objeto iterável. Faz sentido usar for quando sabemos o número exato de vezes que nosso bloco de código deve ser executado, ou quando queremos percorrer um objeto iterável.
-
+### **for*
 ```python
 texto = input("Informe um texto: ")
 VOGAIS = "AEIOU"
@@ -510,6 +510,117 @@ for letra in texto:
         if letra.upper() in VOGAIS:
 		        print(letra, end="")
 print() # adiciona uma quebra de linha
+```
+
+*for/else*
+```python
+texto = input("Informe um texto: ")
+VOGAIS = "AEIOU"
+for letra in texto:
+	if letra.upper() in VOGAIS:
+		print(letra, end="")
+else:
+    print()  # adiciona uma quebra de linha
+```
+
+#### Função range
+Range é uma função built-in do Python, ela é usada para produzir uma sequência de números inteiros a partir de um ínicio (inclusivo) para um fim (exclusivo). Se usarmos range(i, j) será produzido: 
+i, i+1, i+2, i+3, ..., j-1.
+Ela recebe 3 argumentos: stop (obrigatório), start (opcional) e step opcional.
+
+*range*
+```python
+#range(stop) -> range object
+# range(start, stop[, step]) -> range object
+
+list(range(4))
+>>> [0, 1, 2, 3]
+```
+
+*range com for*
+
+```python
+for numero in range(0, 11):
+print(numero, end=" ")
+>>> 0 1 2 3 4 5 6 7 8 9 10
+
+**exibindo a tabuada do 5**
+for numero in range(0, 51, 5):
+	print(numero, end=" ")
+>>> 0 5 10 15 20 25 30 35 40 45 50
+```
+
+#### While
+O comando while é usado para repetir um bloco de código várias vezes. Faz sentido usar while quando não sabemos o número exato de vezes que nosso bloco de código deve ser executado.
+
+*while*
+```python
+opcao = -1
+
+while opcao != 0:
+    opcao = int(input("[1] Sacar \n[2] Extrato \n[0] Sair \n: "))
+
+    if opcao == 1:
+        print("Sacando...")
+    elif opcao == 2:
+        print("Exibindo o extrato...")
+```
+
+*while/else*
+```python
+opcao = -1
+
+while opcao != 0:
+    opcao = int(input("[1] Sacar \n[2] Extrato \n[0] Sair \n: "))
+
+    if opcao == 1:
+        print("Sacando...")
+    elif opcao == 2:
+        print("Exibindo o extrato...")
+else:
+	print("Obrigado por usar nosso sistema bancário, até logo!")
+```
+
+## String e fatiamento
+A classe String do Python é famosa por ser rica em métodos e possuir uma interface muito fácil de trabalhar.
+Em algumas linguagens manipular sequências de caracteres não é um trabalho trivial, porém, em Python esse trabalho é muito simples.
+
+*Maiúscula, minúscula e título*
+```python
+curso = "pYtHon"
+
+print(curso.upper())
+>>> PYTHON
+
+print(curso.lower())
+>>> python
+
+print(curso.title())
+>>> Python
+```
+
+*Eliminando espaços em branco*
+```python
+curso = "   Python "
+
+print(curso.strip())
+>>> "Python"
+
+print(curso.lstrip())
+>>> "Python "
+
+print(curso.rstrip())
+>>> "   Python"
+```
+*Junções e centralização*
+```python
+curso = "Python"
+
+print(curso.center(10, "#"))
+>>> "##Python##"
+
+print(".".join(curso))
+>>> "P.y.t.h.o.n"
 ```
 
 
